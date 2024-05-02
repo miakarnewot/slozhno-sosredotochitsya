@@ -1,5 +1,414 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 18px;
+  background-color: var(--accent-background);
+  background-image: url(../images/cover-image-dark.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 10px;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  top: 10px; 
+  right: 10px; 
+  height: 25px;
+  width: 25px;
+  border-top: 1px solid var(--decor-corner); 
+  border-right: 1px solid var(--decor-corner);
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  bottom: 10px; 
+  left: 10px;
+  height: 25px;
+  width: 25px;
+  border-bottom: 1px solid var(--decor-corner); 
+  border-left: 1px solid var(--decor-corner); 
+}
+
+.rec {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: var(--accent-color);
+}
+
+.rec::after {
+  position: relative;
+  top: -2px;
+  right: -10px;
+  content: '';
+  display: inline-flex;
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  filter: drop-shadow(0px 0px 4px var(--accent-color));
+}
+
+.header__theme-menu {
+  display: flex;
+  justify-self: end;
+}
+
+.header__theme-menu-item {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  height: 26px;
+  border: 1px solid transparent;
+  padding: 0 13px;
+  color: var(--menu-color);
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: lowercase;
+  background-color: transparent;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--menu-color);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--menu-color-transparent40);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--menu-color);
+  pointer-events: none;
+}
+
+.title {
+  padding-top: 15px;
+  color: var(--title-color);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  text-shadow: 4px 4px 0px var(--accent-color);
+}
+
+.title_description {
+  justify-self: end;
+  width: 100%;
+  min-width: 355px;
+  color: var(--text-color);
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 23.4px;
+  background-color: var(--main-color-decor);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-top: 40px;
+  padding-right: 10px;
+  padding-bottom: 40px;
+  padding-left: 10px;
+  background:var(--accent-background);
+}
+
+.section_title {
+  display: flex;
+  gap:10px;
+  color: var(--h2-text-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 23.4px;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.article_title {
+  color: var(--text-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  background-color: var(--main-color-decor);
+}
+
+.article_text {
+  padding-top: 10px;
+  color: var(--article-text-color);
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 23.4px;
+}
+
+.article_subtitle {
+  color: var(--text-color);
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 23.4px;
+  background-color: var(--main-color-decor);
+}
+
+.article_text_link {
+  text-decoration: none;
+  text-shadow: 2px 2px var(--main-color-decor);
+}
+
+.article_text_link:hover {
+  border-block-end: 1px solid var(--article-text-color);
+}
+
+.article_text_link:focus {
+  border: 1px solid var(--article-text-color);
+}
+
+.article_text_link:focus-visible {
+  border: 1px solid var(--article-text-color);
+}
+
+.why_focus_is_so_hard {
+  display: grid;
+  gap: 20px;
+}
+
+.what_reduces_concentration_of_attention {
+  display: grid;
+  gap: 20px;
+}
+
+.how_to_concentrate_better_than_a_goldfish {
+  display: grid;
+  gap: 20px;
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery {
+  display: grid;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: var(--padding);
+  background-color: var(--accent-background);
+}
+
+.footer_title {
+  color: var( --title-color);
+  font-weight: 700;
+  font-size: 116px;
+  line-height: 82.5%;
+  text-shadow: 2px 2px 0px var(--accent-color);
+}
+
+@media (min-width: 768px) and (max-width: 1023.99px) {
+  
+  .header {
+    justify-content: normal;
+    gap: 162px;
+    padding: 20px;
+  }
+
+  .header__theme-menu {
+    justify-self: end;
+    align-self:flex-end;
+    padding-bottom: 10px;
+  }
+
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .header__theme-menu-list {
+    gap: 13px;
+  }
+
+  .title {
+    position: relative;
+    right: 20px;
+    padding-top: 0;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .title_description {
+    width: 100%;
+    max-width: 364px;
+  }
+
+  main {
+    gap: 80px;
+    padding-top: 60px;
+    padding-right: 20px;
+    padding-bottom: 60px;
+    padding-left: 20px;
+  }
+
+  .why_focus_is_so_hard {
+    grid-template-columns: 1fr 472px;
+    gap: 20px;
+  }
+
+  .what_reduces_concentration_of_attention {
+    grid-template-rows: min-content 1fr;
+    gap:20px;
+  }
+
+  .what_reduces_concentration_of_attention > .section_title {
+    width: 236px;
+  }
+
+  .how_to_concentrate_better_than_a_goldfish {
+    grid-template-columns: 1fr 472px;
+    gap: 20px;
+  }
+  
+  .images {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 24.5% 29.5% 42%;
+    gap: 25px;
+  }
+
+  .image_1 {
+    grid-column: 1/3;
+  }
+
+  .image_2 {
+    grid-column: 3/4;
+    grid-row: 1/3;
+  }
+
+  .image_3 {
+    grid-column: 1/2;
+    grid-row: 2/4;
+  }
+
+  .image_4 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  .image_5 {
+    grid-column: 2/4;
+    grid-row: 3/4;
+  }
+  
+  .footer_title {
+    font-size: 120px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .header {
+    position: relative;
+    align-items: start;
+    gap: 114px;
+    padding: 20px;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    align-self:flex-start;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .title {
+    padding-top: 0;
+    font-size: 157px;
+  }
+
+  .title_description {
+    max-width: 50%;
+  }
+
+  .why_focus_is_so_hard {
+    grid-template-columns: 1fr 648px;
+  }
+
+  .what_reduces_concentration_of_attention > .section_title {
+    width: 315px;
+  }
+
+  .what_reduces_concentration_of_attention > .articles_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .how_to_concentrate_better_than_a_goldfish {
+    grid-template-columns: 1fr 648px;
+  }
+
+  .gallery {
+    grid-template-rows: 25% 30% 41%;
+  }
+
+  .footer_title {
+    font-size: 157px;
+  }
+
 }

@@ -1,4 +1,15 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+  --accent-color: #FF0070;
+  --title-color: #DB00FF;
+  --accent-background: #000028;
+  --main-color-decor: #FF0070;
+  --menu-color: #353430;
+  --menu-color-transparent40: rgba(50, 49, 45, 0.40);
+  --text-color: #353430;
+  --h2-text-color: #FF0070;
+  --article-text-color: #F1B2CE;
+  --decor: "";
+  --decor-circle: url('');
+  --decor-corner: #353430;
+}
+
