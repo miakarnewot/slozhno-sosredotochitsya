@@ -322,7 +322,7 @@
 
 }
 
-@media (width <=720px) {
+@media (width <=375px) {
   .header {
     padding: 10px;
   }
