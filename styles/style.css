@@ -13,8 +13,8 @@
   display: grid;
   position: relative;
   grid-template-rows: 1fr auto;
-  padding: 20px;
-  min-height: 100vh;
+  padding: 10px;
+  height: 100%;
 }
 
 .decorated-zone::after,
@@ -129,8 +129,6 @@
   font-size: var(--main-font-size);
 }
 
-
-/* -------блок main----------- */
 
 .main {
   display: flex;
