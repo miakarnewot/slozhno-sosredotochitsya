@@ -1,15 +1,16 @@
 :root {
-  --accent-color: #FF0070;
-  --title-color: #DB00FF;
-  --accent-background: #000028;
-  --main-color-decor: #FF0070;
-  --menu-color: #353430;
-  --menu-color-transparent40: rgba(50, 49, 45, 0.40);
-  --text-color: #353430;
-  --h2-text-color: #FF0070;
-  --article-text-color: #F1B2CE;
-  --decor: "";
-  --decor-circle: url('');
-  --decor-corner: #353430;
+  --background-image: url(../images/cover-image-dark.png);
+  --background-color: #000028;
+  --subtitle-color: #000028;
+  --title-color: #db00ff;
+  --accent-color: #ff0070;
+  --title-shadow-color: #ff0070;
+  --text-color: #f1b2ce;
+  --main-font-family: "IBM Plex Mono", "monospace";
+  --main-font-size: 18px;
+  --decorated-color: #ff0070;
+  --section-text-color: var(--accent-color);
+  --button-color: var(--accent-color);
+  --main-font-size-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --font-size-standart: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
 }
-
