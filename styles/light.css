@@ -13,7 +13,8 @@
   --accent-color: #FF8DCB;
   --text-color: #353430;
   --subtitle-color: #353430;
-  --title-shadow-color: #ff0070;
+  --title-shadow-color: #FF8DCB;
+  --outline-color: #35343040;
   --main-text-color: #353430;
   --decorated-color: #353430;
 }
@@ -40,6 +41,7 @@
   --accent-color: #FF8DCB;
   --section-text-color: var(--main-text-color);
   --button-color: var(--text-color);
+  --outline-color: #35343040;
   --background-color: #fff1f7;
   }
 
@@ -48,11 +50,3 @@
   }
 }
 
-@media (width >= 1024px) {
-  .title {
-    text-shadow: 4px 4px 0px var(--title-shadow-color);
-  }
-  .footer__text {
-    text-shadow: 2px 2px 0px var(--title-shadow-color);
-  }
-}
