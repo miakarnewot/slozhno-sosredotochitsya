@@ -289,6 +289,11 @@
     flex-direction: column;
   }
 
+  .header__subtitle {
+    justify-self: end;
+    inline-size: clamp(364px, calc(100% / 2 - 10px), 491px);
+  }
+
   .header__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
@@ -332,6 +337,10 @@
   .header__theme-menu {
     place-self: center end;
     padding-top: 64.5px;
+  }
+
+  .header__subtitle {
+    width: 100%;
   }
 
   .header__title {
